@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FindMaxGenericsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-04-02T17:41:21" hostname="PRASHANT" time="0.059">
+  <properties/>
+  <testcase name="givenFirstIntegerNumberAsLarge_ShouldReturn_FirstNumberAsMax()" classname="FindMaxGenericsTest" time="0.046"/>
+  <testcase name="givenForthIntegerNumberAsLarge_ShouldReturn_ForthNumberAsMax()" classname="FindMaxGenericsTest" time="0.003"/>
+  <testcase name="givenThirdIntegerNumberAsLarge_ShouldReturn_ThirdNumberAsMax()" classname="FindMaxGenericsTest" time="0.002"/>
+  <testcase name="givenSecondIntegerNumberAsLarge_ShouldReturn_SecondNumberAsMax()" classname="FindMaxGenericsTest" time="0.001"/>
+  <system-out><![CDATA[Max Value = 200
+Max Value = 5000
+Max Value = 1000
+Max Value = 150
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
