@@ -39,5 +39,22 @@ public class FindMaxGenericsTest {
         Assert.assertEquals((Float) 250f, max);
     }
 
+    //string values
+    @Test
+    void givenFirstStringAsLarge_ShouldReturn_FirstStringMax() throws FindMaxGenericsException{
+        String max = new FindMaxGenerics<>("abcd","ab","abc").FindMaxGenericsValue();
+        Assert.assertEquals("abcd", max);
+    }
 
+    @Test
+    void givenSecondStringAsLarge_ShouldReturn_SecondStringMax() throws FindMaxGenericsException{
+        String max = new FindMaxGenerics<>("ab","abcd","abc").FindMaxGenericsValue();
+        Assert.assertEquals("abcd", max);
+    }
+
+    @Test
+    void givenThirdStringAsLarge_ShouldReturn_ThirdStringMax() throws FindMaxGenericsException{
+        String max = new FindMaxGenerics<>("ab","abc","abcd").FindMaxGenericsValue();
+        Assert.assertEquals("abcd", max);
+    }
 }
