@@ -20,10 +20,24 @@ public class FindMaxGenericsTest {
         Integer max = new FindMaxGenerics<>(100, 500, 1000).FindMaxGenericsValue();
         Assert.assertEquals((Integer) 1000, max);
     }
+    // Float Values
+    @Test
+    public void givenFirstFloatNumberAsLarge_ShouldReturn_FirstNumberAsMax() throws FindMaxGenericsException {
+        Float max = new FindMaxGenerics<>(200f,100f,150f).FindMaxGenericsValue();
+        Assert.assertEquals((Float) 200f, max);
+    }
 
     @Test
-    public void givenForthIntegerNumberAsLarge_ShouldReturn_ForthNumberAsMax() throws FindMaxGenericsException {
-        Integer max = new FindMaxGenerics<>(100, 500, 1000, 5000).FindMaxGenericsValue();
-        Assert.assertEquals((Integer) 5000, max);
+    void givenSecondFloatNumberAsLarge_ShouldReturn_SecondNumberMax() throws FindMaxGenericsException{
+        Float max = new FindMaxGenerics<>(100f,200f,50f).FindMaxGenericsValue();
+        Assert.assertEquals((Float) 200f, max);
     }
+
+    @Test
+    void givenThirdFloatNumberAsLarge_ShouldReturn_ThirdNumberMax() throws FindMaxGenericsException{
+        Float max = new FindMaxGenerics<>(100f,20f,250f).FindMaxGenericsValue();
+        Assert.assertEquals((Float) 250f, max);
+    }
+
+
 }
