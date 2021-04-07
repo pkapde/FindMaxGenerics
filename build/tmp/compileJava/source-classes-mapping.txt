@@ -1,2 +1,2 @@
-FindMaximum.java
+FindMax.java
  FindMaximum

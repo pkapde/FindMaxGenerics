@@ -1,5 +1,4 @@
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,92 +6,92 @@ import static org.junit.Assert.assertEquals;
 
 public class FindMaxTest {
 
-    FindMaximum findMaximum;
-
-    @Before
-    public void initData() {
-        findMaximum = new FindMaximum();
+    @DisplayName("Checking sixth max number")
+    @Test
+    public void givenSixIntValue_whenSixthIsMax_returnSixth() {
+        Integer first = 10;
+        Integer second = -3;
+        Integer third = 5;
+        Integer forth = -5;
+        Integer fifth = -15;
+        Integer sixth = 100;
+        assertEquals(sixth, new FindMaximum<Integer>(first, second, third, forth, fifth, sixth).findMax());
     }
 
-    @DisplayName("Cheking first interger is max")
+    @DisplayName("Checking fifth max number")
     @Test
-    public void givenThreeInteger_whenFirstIsMax_returnFirst() {
-        Integer max = FindMaximum.findMaxInt(200, 25, 105);
-        Integer max1 = FindMaximum.findMaxValue(200, 25, 105);
-        assertEquals((Integer) 200, max);
-        assertEquals((Integer) 200, max1);
+    public void givenFiveIntValue_whenSecondIsMax_returnSecond() {
+        Integer first = 10;
+        Integer second = 33;
+        Integer third = 5;
+        Integer forth = -5;
+        Integer fifth = -15;
+        assertEquals(second, new FindMaximum<Integer>(first, second, third, forth, fifth).findMax());
     }
 
-    @DisplayName("Cheking second interger is max")
+    @DisplayName("Checking three max number")
     @Test
-    public void givenThreeInteger_whenSecondIsMax_returnSecond() {
-        Integer max = FindMaximum.findMaxInt(200, 250, 105);
-        Integer max1 = FindMaximum.findMaxValue(200, 250, 105);
-        assertEquals((Integer) 200, max);
-        assertEquals((Integer) 250, max1);
+    public void givenThreeIntValue_whenThirdIsMax_returnThird() {
+        Integer first = 10;
+        Integer second = -3;
+        Integer third = 55;
+        assertEquals(third, new FindMaximum<Integer>(first, second, third).findMax());
     }
 
-    @DisplayName("Cheking third interger is max")
+    @DisplayName("Checking fifth max float")
     @Test
-    public void givenThreeInteger_whenThirdIsMax_returnThird() {
-        Integer max = FindMaximum.findMaxInt(200, 25, 250);
-        Integer max1 = FindMaximum.findMaxValue(200, 20, 250);
-        assertEquals((Integer) 250, max);
-        assertEquals((Integer) 250, max1);
+    public void givenFiveFloatValue_whenFirstIsMax_returnFirst() {
+        Float first = 100.22f;
+        Float second = -300f;
+        Float third = 50.0f;
+        Float forth = 4.54f;
+        Float fifth = 5.44f;
+        assertEquals(first, new FindMaximum<Float>(first, second, third, forth, fifth).findMax());
     }
 
-    //Checking float
-    @DisplayName("Cheking first float is max")
+    @DisplayName("Checking four max float")
     @Test
-    public void givenThreefloat_whenFirstIsMax_returnFirst() {
-        Float max = FindMaximum.findMaxFloat(200f, 25f, 105f);
-        Integer max1 = FindMaximum.findMaxValue(200, 20, 250);
-        assertEquals((Float) 200f, max);
-        assertEquals((Float) 250f, max1);
+    public void givenFourFloatValue_whenSecondIsMax_returnSecond() {
+        Float first = 10f;
+        Float second = 33f;
+        Float third = 5f;
+        Float forth = 4.54f;
+        assertEquals(second, new FindMaximum<Float>(first, second, third, forth).findMax());
     }
 
-    @DisplayName("Cheking second float is max")
+    @DisplayName("Checking third max float")
     @Test
-    public void givenSecondfloat_whenSecondIsMax_returnSecond() {
-        Float max = FindMaximum.findMaxFloat(200f, 250f, 105f);
-        Integer max1 = FindMaximum.findMaxValue(200, 20, 250);
-        assertEquals((Float) 250f, max);
-        assertEquals((Float) 250f, max1);
+    public void givenThreeFloatValue_whenThirdIsMax_returnThird() {
+        Float first = 10f;
+        Float second = -3f;
+        Float third = 55f;
+        assertEquals(third, new FindMaximum<Float>(first, second, third).findMax());
     }
 
-    @DisplayName("Cheking third float is max")
+    @DisplayName("Checking fourth  max string")
     @Test
-    public void givenThirdfloat_whenThirdIsMax_returnThird() {
-        Float max = FindMaximum.findMaxFloat(200f, 250f, 105f);
-        Float max1 = FindMaximum.findMaxValue(200f, 20f, 250f);
-        assertEquals((Float) 250f, max);
-        assertEquals((Float) 250f, max1);
+    public void givenFourStringValue_whenFirstIsMax_returnFirst() {
+        String first = "II";
+        String second = "A2";
+        String third = "Ef";
+        String forth = "Aaaaz";
+        assertEquals(first, new FindMaximum<String>(first, second, third, forth).findMax());
     }
 
-    @DisplayName("Cheking first string is max")
+    @DisplayName("Checking second max string")
     @Test
-    public void givenThreestring_whenFirstIsMax_returnFirst() {
-        String max = FindMaximum.findMaxString("aaa","aa","a");
-        String max1 = FindMaximum.findMaxValue("aaa", "a", "aa");
-        assertEquals((String) "aaa", max);
-        assertEquals((String) "aaa", max1);
+    public void givenTwoStringValue_whenSecondIsMax_returnSecond() {
+        String first = "SS";
+        String second = "ZZZ";
+        assertEquals(second, new FindMaximum<String>(first, second).findMax());
     }
 
-    @DisplayName("Cheking second string is max")
+    @DisplayName("Checking third  max string")
     @Test
-    public void givenThreestring_whenSecondIsMax_returnSecond() {
-        String max = FindMaximum.findMaxString("aa","aaa","a");
-        String max1 = FindMaximum.findMaxValue("a", "aaa", "aa");
-        assertEquals((String) "aaa", max);
-        assertEquals((String) "aaa", max1);
-    }
-
-    @DisplayName("Cheking second string is max")
-    @Test
-    public void givenThreestring_whenThirdIsMax_returnThird() {
-        String max = FindMaximum.findMaxString("aa","a","aaa");
-        String max1 = FindMaximum.findMaxValue("a", "aa", "aaa");
-        assertEquals((String) "aaa", max);
-        assertEquals((String) "aaa", max1);
+    public void givenThreeStringValue_whenThirdIsMax_returnThird() {
+        String first = "A13";
+        String second = "--4";
+        String third = "Z234";
+        assertEquals(third, new FindMaximum<String>(first, second, third).findMax());
     }
 }
