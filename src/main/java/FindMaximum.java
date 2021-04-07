@@ -21,4 +21,9 @@ class FindMaximum <T extends Comparable<T>>{
         return arguments[arguments.length - 1];
     }
 
+    //method to print max value
+    static <T> void printMax(T maximum) {
+        System.out.println("Maximum among given parameters is : " + maximum);
+    }
+
 }
