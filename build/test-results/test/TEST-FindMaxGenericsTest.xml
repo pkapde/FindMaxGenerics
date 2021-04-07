@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FindMaxGenericsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-02T19:39:04" hostname="PRASHANT" time="0.029">
-  <properties/>
-  <testcase name="givenFirstStringAsLarge_ShouldReturn_FirstStringMax()" classname="FindMaxGenericsTest" time="0.029"/>
-  <system-out><![CDATA[Max Value = abcd
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

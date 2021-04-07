@@ -1,4 +1,2 @@
-FindMaxGenericsException.java
- FindMaxGenericsException
-FindMaxGenerics.java
- FindMaxGenerics
+FindMaximum.java
+ FindMaximum

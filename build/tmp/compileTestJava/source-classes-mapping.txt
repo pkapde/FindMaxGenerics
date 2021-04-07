@@ -1,2 +1,2 @@
-FindMaxGenericsTest.java
- FindMaxGenericsTest
+FindMaxTest.java
+ FindMaxTest
